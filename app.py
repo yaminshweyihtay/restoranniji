@@ -27,5 +27,9 @@ def submit_reservation():
 
         return redirect(url_for('booking'))
 
+# if __name__ == '__main__':
+#     app.run(debug=True, port=5003)
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5003)
+    port = int(os.environ.get('PORT', 5003))  # Default to 5003 if PORT environment variable is not set
+    app.run(host='0.0.0.0', port=port)
