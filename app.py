@@ -36,6 +36,9 @@ def submit_reservation():
 #     port = int(os.environ.get('PORT', 5000))  # Default to 5003 if PORT environment variable is not set
 #     app.run(host='0.0.0.0', port=port, debug=False)
 
+app = Flask(__name__, static_url_path='/static')
+
+
 port = int(os.environ.get('PORT', 5000))
 
 if __name__ == '__main__':
